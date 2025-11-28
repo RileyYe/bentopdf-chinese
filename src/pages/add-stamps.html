@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Add Stamps - BentoPDF</title>
+  <title>添加印章 - BentoPDF</title>
   <link rel="icon" type="image/png" href="../../images/favicon.svg" />
   <link href="../../src/css/styles.css" rel="stylesheet" />
 </head>
@@ -22,10 +22,10 @@
 
         <!-- Desktop Navigation -->
         <div class="hidden md:flex items-center space-x-8 text-white">
-          <a href="/" class="nav-link">Home</a>
-          <a href="/about.html" class="nav-link">About</a>
-          <a href="/contact.html" class="nav-link">Contact</a>
-          <a href="/" class="nav-link">All Tools</a>
+          <a href="/" class="nav-link">首页</a>
+          <a href="/about.html" class="nav-link">关于</a>
+          <a href="/contact.html" class="nav-link">联系</a>
+          <a href="/" class="nav-link">所有工具</a>
         </div>
 
         <!-- Mobile Hamburger Button -->
@@ -50,10 +50,10 @@
     <!-- Mobile Menu Dropdown -->
     <div id="mobile-menu" class="hidden md:hidden bg-gray-800 border-t border-gray-700">
       <div class="px-2 pt-2 pb-3 space-y-1 text-center">
-        <a href="/" class="mobile-nav-link">Home</a>
-        <a href="/about.html" class="mobile-nav-link">About</a>
-        <a href="/contact.html" class="mobile-nav-link">Contact</a>
-        <a href="/" class="mobile-nav-link">All Tools</a>
+        <a href="/" class="mobile-nav-link">首页</a>
+        <a href="/about.html" class="mobile-nav-link">关于</a>
+        <a href="/contact.html" class="mobile-nav-link">联系</a>
+        <a href="/" class="mobile-nav-link">所有工具</a>
       </div>
     </div>
   </nav>
@@ -64,12 +64,12 @@
       <button id="back-to-tools"
         class="flex items-center gap-2 text-indigo-400 hover:text-indigo-300 mb-6 font-semibold">
         <i data-lucide="arrow-left" class="cursor-pointer"></i>
-        <span class="cursor-pointer"> Back to Tools </span>
+        <span class="cursor-pointer"> 返回工具 </span>
       </button>
 
-      <h1 class="text-2xl font-bold text-white mb-2">Add Stamps</h1>
+      <h1 class="text-2xl font-bold text-white mb-2">添加印章</h1>
       <p class="text-gray-400 mb-6">
-        Upload a PDF, add image stamps using the toolbar, and then save the stamped PDF.
+        上传 PDF，使用工具栏添加图片印章，然后保存带印章的 PDF。
       </p>
 
       <div
@@ -77,10 +77,10 @@
         <div class="flex flex-col items-center justify-center pt-5 pb-6">
           <i data-lucide="upload-cloud" class="w-10 h-10 mb-3 text-gray-400"></i>
           <p class="mb-2 text-sm text-gray-300">
-            <span class="font-semibold">Click to select a PDF</span> or drag and drop
+            <span class="font-semibold">点击选择 PDF</span> 或拖放
           </p>
-          <p class="text-xs text-gray-500">Single PDF file</p>
-          <p class="text-xs text-gray-500">Your files never leave your device.</p>
+          <p class="text-xs text-gray-500">单个 PDF 文件</p>
+          <p class="text-xs text-gray-500">您的文件永远不会离开您的设备。</p>
         </div>
         <input type="file" id="pdfFile" accept="application/pdf"
           class="absolute top-0 left-0 w-full h-full opacity-0 cursor-pointer" />
@@ -91,8 +91,8 @@
       <!-- Viewer, shown after a PDF is uploaded -->
       <div id="viewer-card" class="hidden mt-6 border border-gray-700 rounded-lg overflow-hidden">
         <div class="px-4 py-3 border-b border-gray-700 flex items-center justify-between">
-          <h2 class="text-lg font-semibold text-white">Stamp Editor</h2>
-          <p class="text-xs text-gray-400">Use the toolbar's image stamp tool to place stamps.</p>
+          <h2 class="text-lg font-semibold text-white">印章编辑器</h2>
+          <p class="text-xs text-gray-400">使用工具栏的图片印章工具放置印章。</p>
         </div>
         <div id="stamp-viewer-container" class="h-[70vh] bg-black/70 flex items-stretch justify-stretch">
           <!-- iframe injected by add-stamps.ts -->
@@ -100,7 +100,7 @@
       </div>
 
       <button id="save-stamped-btn" class="btn-gradient w-full mt-6 flex items-center justify-center gap-2">
-        <span>Save Stamped PDF</span>
+        <span>保存带印章的 PDF</span>
       </button>
     </div>
   </div>

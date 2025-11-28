@@ -106,7 +106,7 @@ function showLoading(current: number, total: number) {
   loader.classList.remove('hidden');
   const percentage = Math.round((current / total) * 100);
   progress.style.width = `${percentage}%`;
-  text.textContent = `Rendering pages...`;
+  text.textContent = `正在渲染页面...`;
 }
 
 async function withButtonLoading(buttonId: string, action: () => Promise<void>) {
@@ -157,7 +157,7 @@ function initializeTool() {
   document.getElementById('upload-pdfs-btn')?.addEventListener('click', () => {
     console.log('Upload button clicked, isRendering:', isRendering);
     if (isRendering) {
-      showModal('Please Wait', 'Pages are still being rendered. Please wait...', 'info');
+      showModal('请稍候', '页面仍在渲染中，请稍候...', 'info');
       return;
     }
     document.getElementById('pdf-file-input')?.click();
@@ -194,7 +194,7 @@ function initializeTool() {
   document.getElementById('bulk-download-btn')?.addEventListener('click', () => {
     if (isRendering) return;
     if (selectedPages.size === 0) {
-      showModal('No Pages Selected', 'Please select at least one page to download.', 'info');
+      showModal('未选择页面', '请至少选择一个页面进行下载。', 'info');
       return;
     }
     withButtonLoading('bulk-download-btn', async () => {
@@ -217,7 +217,7 @@ function initializeTool() {
   document.getElementById('export-pdf-btn')?.addEventListener('click', () => {
     if (isRendering) return;
     if (allPages.length === 0) {
-      showModal('No Pages', 'There are no pages to export.', 'info');
+      showModal('没有页面', '没有可导出的页面。', 'info');
       return;
     }
     withButtonLoading('export-pdf-btn', async () => {
@@ -404,7 +404,7 @@ async function loadPdfs(files: File[]) {
 
       } catch (e) {
         console.error(`Failed to load PDF ${file.name}:`, e);
-        showModal('Error', `Failed to load ${file.name}. The file may be corrupted.`, 'error');
+        showModal('错误', `加载 ${file.name} 失败。文件可能已损坏。`, 'error');
       }
     }
 
@@ -481,7 +481,7 @@ function createPageElement(canvas: HTMLCanvasElement | null, index: number): HTM
     loading.className = 'flex flex-col items-center justify-center text-gray-400';
     loading.innerHTML = `
       <i data-lucide="loader" class="w-8 h-8 animate-spin mb-2"></i>
-      <span class="text-xs">Loading...</span>
+      <span class="text-xs">加载中...</span>
     `;
     preview.appendChild(loading);
     preview.classList.add('bg-gray-700'); // Darker background for loading
@@ -490,7 +490,7 @@ function createPageElement(canvas: HTMLCanvasElement | null, index: number): HTM
   // Page info
   const info = document.createElement('div');
   info.className = 'text-xs text-gray-400 text-center mb-2';
-  info.textContent = `Page ${index + 1}`;
+  info.textContent = `第 ${index + 1} 页`;
 
   // Actions toolbar
   const actions = document.createElement('div');
@@ -531,7 +531,7 @@ function createPageElement(canvas: HTMLCanvasElement | null, index: number): HTM
   const duplicateBtn = document.createElement('button');
   duplicateBtn.className = 'p-1 rounded hover:bg-gray-700';
   duplicateBtn.innerHTML = '<i data-lucide="copy" class="w-4 h-4 text-gray-300"></i>';
-  duplicateBtn.title = 'Duplicate this page';
+  duplicateBtn.title = '复制此页面';
   duplicateBtn.onclick = (e) => {
     e.stopPropagation();
     snapshot();
@@ -542,7 +542,7 @@ function createPageElement(canvas: HTMLCanvasElement | null, index: number): HTM
   const deleteBtn = document.createElement('button');
   deleteBtn.className = 'p-1 rounded hover:bg-gray-700';
   deleteBtn.innerHTML = '<i data-lucide="trash-2" class="w-4 h-4 text-red-400"></i>';
-  deleteBtn.title = 'Delete this page';
+  deleteBtn.title = '删除此页面';
   deleteBtn.onclick = (e) => {
     e.stopPropagation();
     snapshot();
@@ -553,7 +553,7 @@ function createPageElement(canvas: HTMLCanvasElement | null, index: number): HTM
   const insertBtn = document.createElement('button');
   insertBtn.className = 'p-1 rounded hover:bg-gray-700';
   insertBtn.innerHTML = '<i data-lucide="file-plus" class="w-4 h-4 text-gray-300"></i>';
-  insertBtn.title = 'Insert PDF after this page';
+  insertBtn.title = '在此页后插入 PDF';
   insertBtn.onclick = (e) => {
     e.stopPropagation();
     snapshot();
@@ -564,7 +564,7 @@ function createPageElement(canvas: HTMLCanvasElement | null, index: number): HTM
   const splitBtn = document.createElement('button');
   splitBtn.className = 'p-1 rounded hover:bg-gray-700';
   splitBtn.innerHTML = '<i data-lucide="scissors" class="w-4 h-4 text-gray-300"></i>';
-  splitBtn.title = 'Toggle split after this page';
+  splitBtn.title = '切换此页后的拆分标记';
   splitBtn.onclick = (e) => {
     e.stopPropagation();
     snapshot();
@@ -798,7 +798,7 @@ async function handleInsertPdf(e: Event) {
 
   } catch (e) {
     console.error('Failed to insert PDF:', e);
-    showModal('Error', 'Failed to insert PDF. The file may be corrupted.', 'error');
+    showModal('错误', '插入 PDF 失败。文件可能已损坏。', 'error');
   }
 
   input.value = '';
@@ -853,7 +853,7 @@ function addBlankPage() {
 
 function bulkRotate(delta: number) {
   if (selectedPages.size === 0) {
-    showModal('No Selection', 'Please select pages to rotate.', 'info');
+        showModal('未选择', '请选择要旋转的页面。', 'info');
     return;
   }
 
@@ -883,7 +883,7 @@ function bulkRotate(delta: number) {
 
 function bulkDelete() {
   if (selectedPages.size === 0) {
-    showModal('No Selection', 'Please select pages to delete.', 'info');
+    showModal('未选择', '请选择要删除的页面。', 'info');
     return;
   }
   const indices = Array.from(selectedPages).sort((a, b) => b - a);
@@ -900,7 +900,7 @@ function bulkDelete() {
 
 function bulkDuplicate() {
   if (selectedPages.size === 0) {
-    showModal('No Selection', 'Please select pages to duplicate.', 'info');
+    showModal('未选择', '请选择要复制的页面。', 'info');
     return;
   }
   const indices = Array.from(selectedPages).sort((a, b) => b - a);
@@ -913,7 +913,7 @@ function bulkDuplicate() {
 
 function bulkSplit() {
   if (selectedPages.size === 0) {
-    showModal('No Selection', 'Please select pages to mark for splitting.', 'info');
+    showModal('未选择', '请选择要标记拆分的页面。', 'info');
     return;
   }
   const indices = Array.from(selectedPages);
@@ -930,7 +930,7 @@ function bulkSplit() {
 
 async function downloadAll() {
   if (allPages.length === 0) {
-    showModal('No Pages', 'Please upload PDFs first.', 'info');
+    showModal('没有页面', '请先上传 PDF 文件。', 'info');
     return;
   }
 
@@ -1001,10 +1001,10 @@ async function downloadSplitPdfs() {
     const zipBlob = await zip.generateAsync({ type: 'blob' });
     downloadFile(zipBlob, 'split-documents.zip');
 
-    showModal('Success', `Downloaded ${segments.length} PDF files in a ZIP archive.`, 'success');
+    showModal('成功', `已下载 ${segments.length} 个 PDF 文件到 ZIP 压缩包。`, 'success');
   } catch (e) {
     console.error('Failed to create split PDFs:', e);
-    showModal('Error', 'Failed to create split PDFs.', 'error');
+    showModal('错误', '创建拆分 PDF 失败。', 'error');
   } finally {
     hideLoading(); // Ensure loader is hidden if we used it (though showModal replaces it)
   }
@@ -1038,10 +1038,10 @@ async function downloadPagesAsPdf(indices: number[], filename: string) {
     const blob = new Blob([new Uint8Array(pdfBytes)], { type: 'application/pdf' });
 
     downloadFile(blob, filename);
-    showModal('Success', 'PDF downloaded successfully.', 'success');
+    showModal('成功', 'PDF 下载成功。', 'success');
   } catch (e) {
     console.error('Failed to create PDF:', e);
-    showModal('Error', 'Failed to create PDF.', 'error');
+    showModal('错误', '创建 PDF 失败。', 'error');
   }
 }
 
@@ -1078,7 +1078,7 @@ function updatePageDisplay() {
       // Update index-dependent attributes
       card.dataset.pageIndex = index.toString();
       const info = card.querySelector('.text-xs.text-gray-400.text-center.mb-2');
-      if (info) info.textContent = `Page ${index + 1} `;
+      if (info) info.textContent = `第 ${index + 1} 页 `;
 
       // Update selection state
       const selectBtn = card.querySelector('button[class*="absolute top-2 right-2"]');
@@ -1148,7 +1148,7 @@ function updatePageNumbers() {
     // Update visible page number text
     const info = card.querySelector('.text-xs.text-gray-400.text-center.mb-2');
     if (info) {
-      info.textContent = `Page ${index + 1} `;
+      info.textContent = `第 ${index + 1} 页 `;
     }
 
     // Re-attach event listeners for buttons

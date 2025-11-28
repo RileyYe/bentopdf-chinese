@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Generate Table of Contents - BentoPDF</title>
+  <title>生成目录 - BentoPDF</title>
   <link rel="icon" type="image/png" href="../../images/favicon.svg" />
   <link href="../../src/css/styles.css" rel="stylesheet" />
 </head>
@@ -22,10 +22,10 @@
 
         <!-- Desktop Navigation -->
         <div class="hidden md:flex items-center space-x-8 text-white">
-          <a href="/" class="nav-link">Home</a>
-          <a href="/about.html" class="nav-link">About</a>
-          <a href="/contact.html" class="nav-link">Contact</a>
-          <a href="/" class="nav-link">All Tools</a>
+          <a href="/" class="nav-link">首页</a>
+          <a href="/about.html" class="nav-link">关于</a>
+          <a href="/contact.html" class="nav-link">联系</a>
+          <a href="/" class="nav-link">所有工具</a>
         </div>
 
         <!-- Mobile Hamburger Button -->
@@ -52,10 +52,10 @@
     <!-- Mobile Menu Dropdown -->
     <div id="mobile-menu" class="hidden md:hidden bg-gray-800 border-t border-gray-700">
       <div class="px-2 pt-2 pb-3 space-y-1 text-center">
-        <a href="/" class="mobile-nav-link">Home</a>
-        <a href="/about.html" class="mobile-nav-link">About</a>
-        <a href="/contact.html" class="mobile-nav-link">Contact</a>
-        <a href="/" class="mobile-nav-link">All Tools</a>
+        <a href="/" class="mobile-nav-link">首页</a>
+        <a href="/about.html" class="mobile-nav-link">关于</a>
+        <a href="/contact.html" class="mobile-nav-link">联系</a>
+        <a href="/" class="mobile-nav-link">所有工具</a>
       </div>
     </div>
   </nav>
@@ -66,13 +66,13 @@
       <button id="back-to-tools"
         class="flex items-center gap-2 text-indigo-400 hover:text-indigo-300 mb-6 font-semibold">
         <i data-lucide="arrow-left" class="cursor-pointer"></i>
-        <span class="cursor-pointer"> Back to Tools </span>
+        <span class="cursor-pointer"> 返回工具 </span>
       </button>
       <h1 class="text-2xl font-bold text-white mb-2">
-        Generate Table of Contents
+        生成目录
       </h1>
       <p class="text-gray-400 mb-6">
-        Upload a PDF with bookmarks to generate a table of contents page
+        上传带有书签的 PDF 文件以生成目录页
       </p>
 
       <!-- Drop Zone for Main PDF Upload -->
@@ -81,12 +81,11 @@
         <div class="flex flex-col items-center justify-center pt-5 pb-6">
           <i data-lucide="upload-cloud" class="w-10 h-10 mb-3 text-gray-400"></i>
           <p class="mb-2 text-sm text-gray-300">
-            <span class="font-semibold">Click to select a file</span> or drag
-            and drop
+            <span class="font-semibold">点击选择文件</span> 或拖放
           </p>
-          <p class="text-xs text-gray-500">A single PDF file</p>
+          <p class="text-xs text-gray-500">单个 PDF 文件</p>
           <p class="text-xs text-gray-500">
-            Your files never leave your device.
+            您的文件永远不会离开您的设备。
           </p>
         </div>
         <input type="file" id="file-input" accept=".pdf"
@@ -100,16 +99,16 @@
       <div class="mt-6 space-y-4">
         <div>
           <label class="block text-sm font-medium text-gray-300 mb-2">
-            TOC Title
+            目录标题
           </label>
-          <input type="text" id="toc-title" value="Table of Contents"
+          <input type="text" id="toc-title" value="目录"
             class="w-full px-4 py-2 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-            placeholder="Table of Contents" />
+            placeholder="目录" />
         </div>
 
         <div>
           <label class="block text-sm font-medium text-gray-300 mb-2">
-            Font Size
+            字体大小
           </label>
           <select id="font-size"
             class="w-full px-4 py-2 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
@@ -134,7 +133,7 @@
 
         <div>
           <label class="block text-sm font-medium text-gray-300 mb-2">
-            Font Family
+            字体
           </label>
           <select id="font-family"
             class="w-full px-4 py-2 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
@@ -156,14 +155,14 @@
         <div class="flex items-center gap-2">
           <input type="checkbox" id="add-bookmark" checked class="w-4 h-4 accent-blue-500" />
           <label for="add-bookmark" class="text-sm text-gray-300">
-            Add bookmark for TOC page
+            为目录页添加书签
           </label>
         </div>
       </div>
 
       <!-- Generate Button -->
       <button id="generate-btn" disabled class="btn-gradient w-full mt-6">
-        <span id="generate-btn-text">Generate Table of Contents</span>
+        <span id="generate-btn-text">生成目录</span>
       </button>
 
       <!-- Status Message -->
@@ -178,7 +177,7 @@
         <span class="text-white font-bold text-xl">BentoPDF</span>
       </div>
       <p class="text-gray-400 text-sm">
-        &copy; 2025 BentoPDF. All rights reserved.
+        &copy; 2025 BentoPDF。保留所有权利。
       </p>
       <p class="text-gray-500 text-xs mt-1">
         Version <span id="app-version"></span>

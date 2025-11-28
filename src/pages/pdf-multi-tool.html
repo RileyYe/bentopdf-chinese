@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PDF Multi Tool - BentoPDF</title>
+  <title>PDF 多功能工具 - BentoPDF</title>
   <link rel="icon" type="image/png" href="../../images/favicon.svg" />
   <link href="../../src/css/styles.css" rel="stylesheet" />
 
@@ -47,11 +47,11 @@
           <span class="text-white font-bold text-xl ml-2">
             <a href="/">BentoPDF</a>
           </span>
-          <span class="text-gray-400 ml-3 text-sm sm:text-base">PDF Multi Tool</span>
+          <span class="text-gray-400 ml-3 text-sm sm:text-base">PDF 多功能工具</span>
         </div>
         <button id="close-tool-btn"
           class="flex items-center gap-1 bg-gray-700 hover:bg-gray-600 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 rounded text-xs sm:text-sm md:text-base">
-          <i data-lucide="x" class="w-4 h-4 sm:w-5 sm:h-5"></i> Close
+          <i data-lucide="x" class="w-4 h-4 sm:w-5 sm:h-5"></i> 关闭
         </button>
       </div>
     </div>
@@ -69,8 +69,8 @@
         <button id="upload-pdfs-btn"
           class="flex items-center gap-1 sm:gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 rounded text-xs sm:text-sm md:text-base">
           <i data-lucide="upload" class="w-3 h-3 sm:w-4 sm:h-4"></i>
-          <span class="hidden sm:inline">Upload PDFs</span>
-          <span class="sm:hidden">Upload</span>
+          <span class="hidden sm:inline">上传 PDF</span>
+          <span class="sm:hidden">上传</span>
         </button>
 
         <div class="border-l border-gray-600 h-5 sm:h-6 mx-1"></div>
@@ -80,107 +80,107 @@
         <button id="add-blank-page-btn"
           class="flex items-center gap-1 sm:gap-2 bg-gray-700 hover:bg-gray-600 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 rounded text-xs sm:text-sm md:text-base">
           <i data-lucide="file-plus" class="w-3 h-3 sm:w-4 sm:h-4"></i>
-          <span class="hidden sm:inline">Add Blank Page</span>
+          <span class="hidden sm:inline">添加空白页</span>
         </button>
 
         <div class="border-l border-gray-600 h-5 sm:h-6 mx-1"></div>
-        <span class="text-gray-400 text-xs sm:text-sm md:inline">Edit:</span>
+        <span class="text-gray-400 text-xs sm:text-sm md:inline">编辑:</span>
 
 
         <!-- Undo / Redo / Reset -->
         <button id="undo-btn"
           class="flex items-center gap-1 sm:gap-2 bg-gray-700 hover:bg-gray-600 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 rounded text-xs sm:text-sm md:text-base">
           <i data-lucide="undo-2" class="w-3 h-3 sm:w-4 sm:h-4"></i>
-          <span class="hidden lg:inline">Undo</span>
+          <span class="hidden lg:inline">撤销</span>
         </button>
 
         <button id="redo-btn"
           class="flex items-center gap-1 sm:gap-2 bg-gray-700 hover:bg-gray-600 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 rounded text-xs sm:text-sm md:text-base">
           <i data-lucide="redo-2" class="w-3 h-3 sm:w-4 sm:h-4"></i>
-          <span class="hidden lg:inline">Redo</span>
+          <span class="hidden lg:inline">重做</span>
         </button>
 
         <button id="reset-btn"
           class="flex items-center gap-1 sm:gap-2 bg-gray-700 hover:bg-gray-600 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 rounded text-xs sm:text-sm md:text-base">
           <i data-lucide="refresh-ccw" class="w-3 h-3 sm:w-4 sm:h-4"></i>
-          <span class="hidden lg:inline">Reset</span>
+          <span class="hidden lg:inline">重置</span>
         </button>
 
         <div class="border-l border-gray-600 h-5 sm:h-6 mx-1"></div>
 
         <!-- Selection -->
-        <span class="text-gray-400 text-xs sm:text-sm md:inline">Selection:</span>
+        <span class="text-gray-400 text-xs sm:text-sm md:inline">选择:</span>
 
         <button id="select-all-btn"
           class="flex items-center gap-1 sm:gap-2 bg-gray-700 hover:bg-gray-600 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 rounded text-xs sm:text-sm md:text-base">
           <i data-lucide="check-square" class="w-3 h-3 sm:w-4 sm:h-4"></i>
-          <span class="hidden lg:inline">Select All</span>
+          <span class="hidden lg:inline">全选</span>
         </button>
 
         <button id="deselect-all-btn"
           class="flex items-center gap-1 sm:gap-2 bg-gray-700 hover:bg-gray-600 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 rounded text-xs sm:text-sm md:text-base">
           <i data-lucide="square" class="w-3 h-3 sm:w-4 sm:h-4"></i>
-          <span class="hidden lg:inline">Deselect All</span>
+          <span class="hidden lg:inline">取消全选</span>
         </button>
 
         <div class="border-l border-gray-600 h-5 sm:h-6 mx-1"></div>
 
         <!-- Rotate -->
-        <span class="text-gray-400 text-xs sm:text-sm md:inline">Rotate:</span>
+        <span class="text-gray-400 text-xs sm:text-sm md:inline">旋转:</span>
         <button id="bulk-rotate-left-btn"
           class="flex items-center gap-1 sm:gap-2 bg-gray-700 hover:bg-gray-600 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 rounded text-xs sm:text-sm md:text-base">
           <i data-lucide="rotate-ccw" class="w-3 h-3 sm:w-4 sm:h-4"></i>
-          <span class="hidden xl:inline">Left</span>
+          <span class="hidden xl:inline">左</span>
         </button>
 
         <button id="bulk-rotate-btn"
           class="flex items-center gap-1 sm:gap-2 bg-gray-700 hover:bg-gray-600 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 rounded text-xs sm:text-sm md:text-base">
           <i data-lucide="rotate-cw" class="w-3 h-3 sm:w-4 sm:h-4"></i>
-          <span class="hidden xl:inline">Right</span>
+          <span class="hidden xl:inline">右</span>
         </button>
 
         <div class="border-l border-gray-600 h-5 sm:h-6 mx-1"></div>
-        <span class="text-gray-400 text-xs sm:text-sm md:inline">Transform:</span>
+        <span class="text-gray-400 text-xs sm:text-sm md:inline">变换:</span>
 
 
         <!-- Duplicate / Split -->
         <button id="bulk-duplicate-btn"
           class="flex items-center gap-1 sm:gap-2 bg-gray-700 hover:bg-gray-600 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 rounded text-xs sm:text-sm md:text-base">
           <i data-lucide="copy" class="w-3 h-3 sm:w-4 sm:h-4"></i>
-          <span class="hidden xl:inline">Duplicate</span>
+          <span class="hidden xl:inline">复制</span>
         </button>
 
         <button id="bulk-split-btn"
           class="flex items-center gap-1 sm:gap-2 bg-gray-700 hover:bg-gray-600 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 rounded text-xs sm:text-sm md:text-base">
           <i data-lucide="scissors" class="w-3 h-3 sm:w-4 sm:h-4"></i>
-          <span class="hidden xl:inline">Split</span>
+          <span class="hidden xl:inline">拆分</span>
         </button>
 
         <div class="border-l border-gray-600 h-5 sm:h-6 mx-1"></div>
-        <span class="text-gray-400 text-xs sm:text-sm md:inline">Clear:</span>
+        <span class="text-gray-400 text-xs sm:text-sm md:inline">清除:</span>
 
 
         <!-- Delete -->
         <button id="bulk-delete-btn"
           class="flex items-center gap-1 sm:gap-2 bg-red-500 hover:bg-red-700 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 rounded text-xs sm:text-sm md:text-base">
           <i data-lucide="trash-2" class="w-3 h-3 sm:w-4 sm:h-4"></i>
-          <span class="hidden xl:inline">Delete</span>
+          <span class="hidden xl:inline">删除</span>
         </button>
 
         <div class="border-l border-gray-600 h-5 sm:h-6 mx-1"></div>
 
         <!-- Download -->
-        <span class="text-gray-400 text-xs sm:text-sm md:inline">Download:</span>
+        <span class="text-gray-400 text-xs sm:text-sm md:inline">下载:</span>
         <button id="bulk-download-btn"
           class="flex items-center gap-1 sm:gap-2 bg-green-600 hover:bg-green-700 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 rounded text-xs sm:text-sm md:text-base">
           <i data-lucide="download" class="w-3 h-3 sm:w-4 sm:h-4"></i>
-          <span class="hidden xl:inline">Download Selected</span>
+          <span class="hidden xl:inline">下载选中</span>
         </button>
 
         <button id="export-pdf-btn"
           class="flex items-center gap-1 sm:gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 rounded text-xs sm:text-sm md:text-base">
           <i data-lucide="download" class="w-3 h-3 sm:w-4 sm:h-4"></i>
-          <span class="hidden xl:inline">Export PDF</span>
+          <span class="hidden xl:inline">导出 PDF</span>
         </button>
       </div>
     </div>
@@ -191,12 +191,12 @@
         class="hidden border-2 border-dashed border-gray-600 rounded-lg p-6 sm:p-12 text-center max-w-full cursor-pointer"
         onclick="document.getElementById('pdf-file-input').click()">
         <i data-lucide="upload-cloud" class="w-12 h-12 sm:w-16 sm:h-16 mx-auto text-gray-400 mb-3 sm:mb-4"></i>
-        <p class="text-gray-300 text-base sm:text-lg mb-1 sm:mb-2">Upload PDF Files</p>
-        <p class="text-gray-400 text-xs sm:text-sm mb-3 sm:mb-4">Drag and drop PDF files here, or click to select</p>
+        <p class="text-gray-300 text-base sm:text-lg mb-1 sm:mb-2">上传 PDF 文件</p>
+        <p class="text-gray-400 text-xs sm:text-sm mb-3 sm:mb-4">拖放 PDF 文件到此处，或点击选择</p>
         <input type="file" id="pdf-file-input" accept="application/pdf" multiple class="hidden">
         <button onclick="event.stopPropagation(); document.getElementById('pdf-file-input').click()"
           class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 sm:px-6 py-2 rounded text-sm sm:text-base">
-          Select Files
+          选择文件
         </button>
       </div>
 
@@ -211,7 +211,7 @@
       <div class="flex items-center justify-center mb-4">
         <i data-lucide="loader" class="w-12 h-12 text-indigo-400 animate-spin"></i>
       </div>
-      <p id="loading-text" class="text-white text-center text-lg mb-4">Rendering pages...</p>
+      <p id="loading-text" class="text-white text-center text-lg mb-4">正在渲染页面...</p>
       <div class="w-full bg-gray-700 rounded-full h-2.5">
         <div id="loading-progress" class="bg-indigo-600 h-2.5 rounded-full transition-all duration-300"
           style="width: 0%"></div>
@@ -228,7 +228,7 @@
       <h3 id="modal-title" class="text-xl font-bold text-white text-center mb-2"></h3>
       <p id="modal-message" class="text-gray-300 text-center mb-6"></p>
       <button id="modal-close-btn" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded">
-        Close
+        关闭
       </button>
     </div>
   </div>

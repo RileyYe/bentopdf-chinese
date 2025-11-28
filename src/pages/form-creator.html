@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Create PDF Form - BentoPDF</title>
+    <title>创建 PDF 表单 - BentoPDF</title>
     <link rel="icon" type="image/png" href="../../images/favicon.svg" />
     <link href="../../src/css/styles.css" rel="stylesheet" />
 </head>
@@ -22,10 +22,10 @@
 
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center space-x-8 text-white">
-                    <a href="/" class="nav-link">Home</a>
-                    <a href="/about.html" class="nav-link">About</a>
-                    <a href="/contact.html" class="nav-link">Contact</a>
-                    <a href="/" class="nav-link">All Tools</a>
+                    <a href="/" class="nav-link">首页</a>
+                    <a href="/about.html" class="nav-link">关于</a>
+                    <a href="/contact.html" class="nav-link">联系</a>
+                    <a href="/" class="nav-link">所有工具</a>
                 </div>
 
                 <!-- Mobile Hamburger Button -->
@@ -52,10 +52,10 @@
         <!-- Mobile Menu Dropdown -->
         <div id="mobile-menu" class="hidden md:hidden bg-gray-800 border-t border-gray-700">
             <div class="px-2 pt-2 pb-3 space-y-1 text-center">
-                <a href="/" class="mobile-nav-link">Home</a>
-                <a href="/about.html" class="mobile-nav-link">About</a>
-                <a href="/contact.html" class="mobile-nav-link">Contact</a>
-                <a href="/" class="mobile-nav-link">All Tools</a>
+                <a href="/" class="mobile-nav-link">首页</a>
+                <a href="/about.html" class="mobile-nav-link">关于</a>
+                <a href="/contact.html" class="mobile-nav-link">联系</a>
+                <a href="/" class="mobile-nav-link">所有工具</a>
             </div>
         </div>
     </nav>
@@ -69,12 +69,12 @@
             <button id="back-to-tools-upload"
                 class="flex items-center gap-2 text-indigo-400 hover:text-indigo-300 mb-6 font-semibold">
                 <i data-lucide="arrow-left" class="cursor-pointer"></i>
-                <span class="cursor-pointer">Back to Tools</span>
+                <span class="cursor-pointer">返回工具</span>
             </button>
 
-            <h1 class="text-2xl font-bold text-white mb-2">Create PDF Form</h1>
+            <h1 class="text-2xl font-bold text-white mb-2">创建 PDF 表单</h1>
             <p class="text-gray-400 mb-6">
-                Upload an existing PDF or create a blank PDF to start adding form fields.
+                上传现有 PDF 或创建空白 PDF 以开始添加表单字段。
             </p>
 
             <div class="relative flex flex-col items-center justify-center w-full h-44 border-2 border-dashed border-gray-600 rounded-xl cursor-pointer bg-gray-700 hover:bg-gray-600 transition-colors duration-300"
@@ -82,10 +82,10 @@
                 <div class="flex flex-col items-center justify-center pt-5 pb-6">
                     <i data-lucide="upload-cloud" class="w-10 h-10 mb-3 text-gray-400"></i>
                     <p class="mb-2 text-sm text-gray-300">
-                        <span class="font-semibold">Click to select a PDF</span> or drag and drop
+                        <span class="font-semibold">点击选择 PDF</span> 或拖放
                     </p>
-                    <p class="text-xs text-gray-500">Single PDF file</p>
-                    <p class="text-xs text-gray-500">Your files never leave your device.</p>
+                    <p class="text-xs text-gray-500">单个 PDF 文件</p>
+                    <p class="text-xs text-gray-500">您的文件永远不会离开您的设备。</p>
                 </div>
                 <input type="file" id="pdfFileInput" accept="application/pdf"
                     class="absolute top-0 left-0 w-full h-full opacity-0 cursor-pointer" />
@@ -107,11 +107,11 @@
                 <button id="blankPdfBtn"
                     class="w-full bg-gray-700 hover:bg-gray-600 text-white p-4 rounded-lg flex items-center justify-center gap-3 transition-colors">
                     <i data-lucide="file-plus" class="w-5 h-5"></i>
-                    <span class="font-semibold">Create Blank PDF</span>
+                    <span class="font-semibold">创建空白 PDF</span>
                 </button>
 
                 <div id="pageSizeSelector" class="mt-4 hidden">
-                    <label class="block text-sm font-semibold text-gray-300 mb-2">Page Size:</label>
+                    <label class="block text-sm font-semibold text-gray-300 mb-2">页面大小：</label>
                     <select id="pageSizeSelect"
                         class="w-full bg-gray-600 border border-gray-500 text-white rounded px-3 py-2 text-sm focus:ring-indigo-500 focus:border-indigo-500">
                         <option value="letter">Letter (8.5" × 11")</option>
@@ -141,7 +141,7 @@
 
                     <button id="confirmBlankBtn"
                         class="w-full mt-3 bg-indigo-600 hover:bg-indigo-500 text-white p-2 rounded transition-colors">
-                        Start Creating
+                        开始创建
                     </button>
                 </div>
             </div>
@@ -153,13 +153,12 @@
             <button id="back-to-tools-creator"
                 class="flex items-center gap-2 text-indigo-400 hover:text-indigo-300 mb-6 font-semibold">
                 <i data-lucide="arrow-left" class="cursor-pointer"></i>
-                <span class="cursor-pointer">Back to Tools</span>
+                <span class="cursor-pointer">返回工具</span>
             </button>
 
-            <h1 class="text-2xl font-bold text-white mb-2">Create PDF Form</h1>
+            <h1 class="text-2xl font-bold text-white mb-2">创建 PDF 表单</h1>
             <p class="text-gray-400 mb-6">
-                Drag and drop fields onto the canvas to create a fillable PDF form. Customize field properties and
-                download your form.
+                将字段拖放到画布上以创建可填写的 PDF 表单。自定义字段属性并下载您的表单。
             </p>
 
             <!-- Main Form Creator Area -->
@@ -170,19 +169,19 @@
                     <div class="bg-gray-700 rounded-lg p-4">
                         <h2 class="font-semibold text-gray-200 mb-3 flex items-center gap-2">
                             <i data-lucide="settings" class="w-4 h-4"></i>
-                            Properties
+                            属性
                         </h2>
                         <div id="propertiesPanel" class="space-y-3">
-                            <p class="text-gray-500 text-sm">Select a field to edit properties</p>
+                            <p class="text-gray-500 text-sm">选择一个字段以编辑属性</p>
                         </div>
                     </div>
 
                     <!-- Field Count -->
                     <div class="mt-4 bg-gray-700 rounded-lg p-3 text-center">
                         <p class="text-sm text-gray-400">
-                            <span id="fieldCount" class="text-indigo-400 font-bold text-lg">0</span> field(s)
+                            <span id="fieldCount" class="text-indigo-400 font-bold text-lg">0</span> 个字段
                         </p>
-                        <p class="text-xs text-gray-500 mt-1">Press Delete to remove selected field</p>
+                        <p class="text-xs text-gray-500 mt-1">按 Delete 键删除选中的字段</p>
                     </div>
                 </aside>
 
@@ -196,7 +195,7 @@
                                 disabled>
                                 <i data-lucide="chevron-left" class="w-4 h-4"></i>
                             </button>
-                            <span id="pageIndicator" class="text-sm text-gray-300 px-2">Page 1 of 1</span>
+                            <span id="pageIndicator" class="text-sm text-gray-300 px-2">第 1 页，共 1 页</span>
                             <button id="nextPageBtn"
                                 class="bg-gray-600 hover:bg-gray-500 text-white p-2 rounded transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                                 disabled>
@@ -207,12 +206,12 @@
                             <button id="resetBtn"
                                 class="bg-gray-600 hover:bg-gray-500 text-white p-2 px-3 rounded flex items-center gap-2 transition-colors">
                                 <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
-                                <span class="text-sm">Reset</span>
+                                <span class="text-sm">重置</span>
                             </button>
                             <button id="addPageBtn"
                                 class="bg-indigo-600 hover:bg-indigo-500 text-white p-2 px-3 rounded flex items-center gap-2 transition-colors">
                                 <i data-lucide="file-plus" class="w-4 h-4"></i>
-                                <span class="text-sm">Add Page</span>
+                                <span class="text-sm">添加页面</span>
                             </button>
                         </div>
                     </div>
@@ -221,61 +220,61 @@
                     <div class="bg-gray-700 rounded-lg p-2 mb-4">
                         <div class="flex flex-wrap gap-2 justify-center items-center max-w-full overflow-hidden">
                             <div class="text-gray-400 text-sm font-semibold mr-2 flex items-center gap-1">
-                                <i data-lucide="wrench" class="w-4 h-4"></i> Fields:
+                                <i data-lucide="wrench" class="w-4 h-4"></i> 字段：
                             </div>
 
                             <div class="tool-item bg-gray-600 hover:bg-indigo-600 text-white p-2 rounded cursor-move transition-colors flex items-center gap-2"
                                 draggable="true" data-type="text" title="Text Field">
                                 <i data-lucide="type" class="w-4 h-4"></i>
-                                <span class="text-xs">Text</span>
+                                <span class="text-xs">文本</span>
                             </div>
 
                             <div class="tool-item bg-gray-600 hover:bg-indigo-600 text-white p-2 rounded cursor-move transition-colors flex items-center gap-2"
-                                draggable="true" data-type="checkbox" title="Checkbox">
+                                draggable="true" data-type="checkbox" title="复选框">
                                 <i data-lucide="check-square" class="w-4 h-4"></i>
-                                <span class="text-xs">Checkbox</span>
+                                <span class="text-xs">复选框</span>
                             </div>
 
                             <div class="tool-item bg-gray-600 hover:bg-indigo-600 text-white p-2 rounded cursor-move transition-colors flex items-center gap-2"
-                                draggable="true" data-type="radio" title="Radio Button">
+                                draggable="true" data-type="radio" title="单选按钮">
                                 <i data-lucide="circle-dot" class="w-4 h-4"></i>
-                                <span class="text-xs">Radio</span>
+                                <span class="text-xs">单选</span>
                             </div>
 
                             <div class="tool-item bg-gray-600 hover:bg-indigo-600 text-white p-2 rounded cursor-move transition-colors flex items-center gap-2"
-                                draggable="true" data-type="dropdown" title="Dropdown">
+                                draggable="true" data-type="dropdown" title="下拉框">
                                 <i data-lucide="chevron-down-square" class="w-4 h-4"></i>
-                                <span class="text-xs">Dropdown</span>
+                                <span class="text-xs">下拉框</span>
                             </div>
 
                             <div class="tool-item bg-gray-600 hover:bg-indigo-600 text-white p-2 rounded cursor-move transition-colors flex items-center gap-2"
-                                draggable="true" data-type="optionlist" title="Option List">
+                                draggable="true" data-type="optionlist" title="选项列表">
                                 <i data-lucide="list" class="w-4 h-4"></i>
-                                <span class="text-xs">List</span>
+                                <span class="text-xs">列表</span>
                             </div>
 
                             <div class="tool-item bg-gray-600 hover:bg-indigo-600 text-white p-2 rounded cursor-move transition-colors flex items-center gap-2"
-                                draggable="true" data-type="button" title="Button">
+                                draggable="true" data-type="button" title="按钮">
                                 <i data-lucide="square-mouse-pointer" class="w-4 h-4"></i>
-                                <span class="text-xs">Button</span>
+                                <span class="text-xs">按钮</span>
                             </div>
 
                             <div class="tool-item bg-gray-600 hover:bg-indigo-600 text-white p-2 rounded cursor-move transition-colors flex items-center gap-2"
-                                draggable="true" data-type="signature" title="Signature">
+                                draggable="true" data-type="signature" title="签名">
                                 <i data-lucide="pen-tool" class="w-4 h-4"></i>
-                                <span class="text-xs">Signature</span>
+                                <span class="text-xs">签名</span>
                             </div>
 
                             <div class="tool-item bg-gray-600 hover:bg-indigo-600 text-white p-2 rounded cursor-move transition-colors flex items-center gap-2"
-                                draggable="true" data-type="date" title="Date Field">
+                                draggable="true" data-type="date" title="日期字段">
                                 <i data-lucide="calendar" class="w-4 h-4"></i>
-                                <span class="text-xs">Date</span>
+                                <span class="text-xs">日期</span>
                             </div>
 
                             <div class="tool-item bg-gray-600 hover:bg-indigo-600 text-white p-2 rounded cursor-move transition-colors flex items-center gap-2"
-                                draggable="true" data-type="image" title="Image Field">
+                                draggable="true" data-type="image" title="图片字段">
                                 <i data-lucide="image" class="w-4 h-4"></i>
-                                <span class="text-xs">Image</span>
+                                <span class="text-xs">图片</span>
                             </div>
                         </div>
                     </div>
@@ -291,7 +290,7 @@
 
                     <!-- Download Button -->
                     <button id="downloadBtn" class="btn-gradient w-full flex items-center justify-center gap-2 py-3">
-                        <span>Download PDF Form</span>
+                        <span>下载 PDF 表单</span>
                     </button>
                 </main>
             </div>
@@ -316,11 +315,11 @@
     <div id="errorModal" class="hidden fixed inset-0 z-[9999] flex items-center justify-center bg-black bg-opacity-75">
         <div class="bg-gray-800 rounded-lg shadow-2xl max-w-md w-full mx-4 border border-gray-700">
             <div class="p-6">
-                <h3 id="errorModalTitle" class="text-xl font-bold text-white mb-3">Error</h3>
-                <p id="errorModalMessage" class="text-gray-300 mb-6">An error occurred.</p>
+                <h3 id="errorModalTitle" class="text-xl font-bold text-white mb-3">错误</h3>
+                <p id="errorModalMessage" class="text-gray-300 mb-6">发生错误。</p>
                 <button id="errorModalClose"
                     class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded transition-colors">
-                    Close
+                    关闭
                 </button>
             </div>
         </div>
