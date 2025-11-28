@@ -622,7 +622,7 @@ function showAlertModal(title, message) {
                         <h3 class="text-xl font-bold text-gray-800 mb-4">${title}</h3>
                         <p class="text-gray-600 mb-6">${message}</p>
                         <div class="flex justify-end">
-                            <button id="modal-ok" class="px-4 py-2 rounded bg-blue-500 hover:bg-blue-600 text-white">OK</button>
+                            <button id="modal-ok" class="px-4 py-2 rounded bg-blue-500 hover:bg-blue-600 text-white">确定</button>
                         </div>
                     </div>
                 `;

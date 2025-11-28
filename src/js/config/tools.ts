@@ -11,21 +11,21 @@ export const categories = [
       },
       {
         id: 'merge',
-        name: 'Merge PDF',
+        name: '合并 PDF',
         icon: 'combine',
-        subtitle: 'Combine multiple PDFs into one file.',
+        subtitle: '将多个 PDF 合并为一个文件。',
       },
       {
         id: 'split',
-        name: 'Split PDF',
+        name: '拆分 PDF',
         icon: 'scissors',
-        subtitle: 'Extract a range of pages into a new PDF.',
+        subtitle: '提取页面范围到新的 PDF。',
       },
       {
         id: 'compress',
-        name: 'Compress PDF',
+        name: '压缩 PDF',
         icon: 'zap',
-        subtitle: 'Reduce the file size of your PDF.',
+        subtitle: '减小 PDF 文件大小。',
       },
       {
         id: 'edit',
@@ -36,9 +36,9 @@ export const categories = [
       },
       {
         id: 'jpg-to-pdf',
-        name: 'JPG to PDF',
+        name: 'JPG 转 PDF',
         icon: 'image-up',
-        subtitle: 'Create a PDF from one or more JPG images.',
+        subtitle: '从一个或多个 JPG 图片创建 PDF。',
       },
       {
         id: 'sign-pdf',
@@ -186,9 +186,9 @@ export const categories = [
       },
       {
         id: 'jpg-to-pdf',
-        name: 'JPG to PDF',
+        name: 'JPG 转 PDF',
         icon: 'image-up',
-        subtitle: 'Create a PDF from one or more JPG images.',
+        subtitle: '从一个或多个 JPG 图片创建 PDF。',
       },
       {
         id: 'png-to-pdf',
@@ -302,9 +302,9 @@ export const categories = [
       },
       {
         id: 'merge',
-        name: 'Merge PDF',
+        name: '合并 PDF',
         icon: 'combine',
-        subtitle: 'Combine multiple PDFs into one file.',
+        subtitle: '将多个 PDF 合并为一个文件。',
       },
       {
         id: 'alternate-merge',
@@ -350,9 +350,9 @@ export const categories = [
       },
       {
         id: 'split',
-        name: 'Split PDF',
+        name: '拆分 PDF',
         icon: 'scissors',
-        subtitle: 'Extract a range of pages into a new PDF.',
+        subtitle: '提取页面范围到新的 PDF。',
       },
       {
         id: 'split-in-half',
@@ -374,9 +374,9 @@ export const categories = [
       },
       {
         id: 'add-blank-page',
-        name: 'Add Blank Page',
+        name: '添加空白页',
         icon: 'file-plus-2',
-        subtitle: 'Insert an empty page anywhere in your PDF.',
+        subtitle: '在 PDF 的任意位置插入空白页。',
       },
       {
         id: 'reverse-pages',
@@ -439,9 +439,9 @@ export const categories = [
     tools: [
       {
         id: 'compress',
-        name: 'Compress PDF',
+        name: '压缩 PDF',
         icon: 'zap',
-        subtitle: 'Reduce the file size of your PDF.',
+        subtitle: '减小 PDF 文件大小。',
       },
       {
         id: 'fix-dimensions',

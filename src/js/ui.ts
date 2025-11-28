@@ -461,7 +461,7 @@ export const toolTemplates = {
                 <p class="mt-1 text-xs text-gray-400">每个生成的 PDF 将包含 N 页（最后一个可能除外）</p>
             </div>
             <div id="n-times-warning" class="hidden p-3 bg-yellow-900/30 border border-yellow-500/30 rounded-lg mb-3">
-                <p class="text-sm text-yellow-200"><strong>Note:</strong> <span id="n-times-warning-text"></span></p>
+                <p class="text-sm text-yellow-200"><strong>注意：</strong> <span id="n-times-warning-text"></span></p>
             </div>
         </div>
         
@@ -472,7 +472,7 @@ export const toolTemplates = {
             </label>
         </div>
         
-        <button id="process-btn" class="btn-gradient w-full mt-6">Split PDF</button>
+        <button id="process-btn" class="btn-gradient w-full mt-6">拆分 PDF</button>
 
     </div>
 `,
